@@ -1,12 +1,13 @@
 //import react from 'react';
 import {useState} from 'react';
 import {useEffect} from 'react';
+import RunningExercise from '../RunningExercise'; //display laps
 
 //resources- https://www.youtube.com/watch?v=t032MnGcIWQ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
 
 const DurationExercise = () => {
   const [time, setTime] = useState(0); //start the clock at zero, time is the variable, setTime updates the variable
-  const [clock, timerRunning] = useState(false); //set to false so clock doesnt run until start button is clicked, 
+  const [clock, timerRunning] = useState(false); //set to false so clock doesnt run until start button is clicked, timerRunning is to set the clock
 
   useEffect(() => {
     let timer; //set interval variable
@@ -32,6 +33,7 @@ const DurationExercise = () => {
         <button onClick={() => timerRunning(false)}>Stop</button> {/*stop button - changes the running to false but doesnt change the time.*/}
         <br></br>
         <button onClick={() => {timerRunning(false); setTime(0);}}>Reset</button> {/*reset button- when it is clicked set time to zero*/}
+        <RunningExercise currentTime = {time}/>
       </div>
 
     </div>

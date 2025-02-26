@@ -11,3 +11,7 @@
 body{
     background-color: aliceblue;
 }
+
+#Laps ul {
+    list-style-type: none;
+  }

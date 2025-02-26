@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './App.css';
 import DurationExercise from './components/DurationExercise';
 import RepetitionExercise from './components/RepetitionExercise';
+//import RunningExercise from './components/RunningExercise';
 
 //resources - https://www.w3schools.com/jsref/jsref_map.asp https://www.w3schools.com/jsref/jsref_operators.asp 
 
@@ -61,7 +62,7 @@ function MenuPage() {
           <h1>{selectedExercise.name}</h1> {/*page title is the exercise title*/}
 
           {selectedExercise.type === 'Duration' ? ( //turnary operator, if they selected duration then redirect to the duration page
-            <DurationExercise name={selectedExercise.name} />
+            <DurationExercise name={selectedExercise.name} /> //duration or running??
           ) : ( //if false (they selected repetition) then redirect to the repetiton page
             <RepetitionExercise name={selectedExercise.name} />
           )}
@@ -80,6 +81,7 @@ const App = () => {
   return (
     <div className="App">
       <MenuPage />
+      {/*<RunningExercise /> */}
     </div>
   );
 };
