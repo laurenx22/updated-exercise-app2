@@ -2,12 +2,14 @@
 import {useState} from 'react';
 import {useEffect} from 'react';
 import RunningExercise from '../RunningExercise'; //display laps
+import { Text, Button, View } from 'react-native';
 
 //resources- https://www.youtube.com/watch?v=t032MnGcIWQ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
 
 const DurationExercise = () => {
   const [time, setTime] = useState(0); //start the clock at zero, time is the variable, setTime updates the variable
   const [clock, timerRunning] = useState(false); //set to false so clock doesnt run until start button is clicked, timerRunning is to set the clock
+  //const { exercise } = route.params;
 
   useEffect(() => {
     let timer; //set interval variable

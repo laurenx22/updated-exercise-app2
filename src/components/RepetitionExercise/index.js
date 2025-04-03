@@ -1,9 +1,11 @@
 //import react from 'react';
 import {useState} from 'react';
 //import '../App.js';
+import { Text, Button, View } from 'react-native';
 
 
 const RepetitionExercise = () => {
+    //const { exercise } = route.params;
     const [count, adding] = useState(0); //set the initial value to zero, count is the variable, adding is the function that changes the variable
 
     return(
